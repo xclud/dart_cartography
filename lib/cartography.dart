@@ -1,3 +1,4 @@
+/// Vector tile extension for Map package. Paint vector tiles layers on the Map.
 library cartography;
 
 export 'src/feature.dart';

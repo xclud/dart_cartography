@@ -3,13 +3,20 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:vt/vt.dart' as vt;
 
+/// Base geometry.
 abstract class Geometry {
+  /// Creates a Point geometry.
   factory Geometry.point({required Offset coordinates}) = PointGeometry._;
+
+  /// Creates a Line String geometry.
   factory Geometry.lineString({required Path coordinates}) =
       LineStringGeometry._;
+
+  /// Creates a Polygon geometry.
   factory Geometry.polygon({required List<Path> coordinates}) =
       PolygonGeometry._;
 
+  /// Creates a Geometry from a [vt.Geometry] instance.
   factory Geometry.fromRaw(vt.Geometry geometry) {
     if (geometry is vt.PointGeometry) {
       return Geometry.point(
@@ -27,33 +34,41 @@ abstract class Geometry {
       throw FlutterError('Geometry is unknown.');
     }
   }
+
+  /// Default private constructor.
   const Geometry._();
 }
 
 /// Point Geometry.
 class PointGeometry extends Geometry {
+  /// The default constructor.
   const PointGeometry._({
     required this.coordinates,
   }) : super._();
 
+  /// Coordinates of the PointGeometry.
   final Offset coordinates;
 }
 
 /// LineString Geometry.
 class LineStringGeometry extends Geometry {
+  /// The default constructor.
   const LineStringGeometry._({
     required this.coordinates,
   }) : super._();
 
+  /// Coordinates of the LineStringGeometry.
   final Path coordinates;
 }
 
 /// Polygon Geometry.
 class PolygonGeometry extends Geometry {
+  /// The default constructor.
   const PolygonGeometry._({
     required this.coordinates,
   }) : super._();
 
+  /// Coordinates of the PolygonGeometry.
   final List<Path> coordinates;
 }
 
