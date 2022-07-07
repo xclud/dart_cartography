@@ -1,7 +1,8 @@
 name: cartography
-description: Cartography for Flutter. Paint vector tiles on the Map.
-version: 0.0.1
+description: Vector tile extension for Map package. Paint vector tiles layers on the Map.
+version: 0.0.2
 homepage: https://pwa.ir
+repository: https://github.com/xclud/dart_cartography
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
@@ -10,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  vt: ^1.1.0
+  vt: ^1.1.1
 
 dev_dependencies:
   flutter_test:

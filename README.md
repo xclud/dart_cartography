@@ -1,14 +1,14 @@
 [![pub package](https://img.shields.io/pub/v/cartography.svg)](https://pub.dartlang.org/packages/cartography)
 
-Cartography for Flutter. Paint vector tiles on the Map.
+Vector tile extension for [Map](https://pub.dev/packages/map) package. Paint vector tiles layers on the Map.
 
 ## Features
 
+* VectorTile
+* Layer
 * Feature
 * Geometry
-* Layer
-* Value
-* VectorTile
+* Properties
 
 ## Getting started
 
